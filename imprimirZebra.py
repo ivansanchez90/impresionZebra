@@ -165,17 +165,31 @@ class EtiquetasApp:
         except Exception as e:
             messagebox.showerror("Error", f"Ocurrió un error al imprimir: {str(e)}")
     
-    def generar_zpl(self, producto):
-        # Plantilla ZPL para etiqueta (ajustable según necesidades)
-        zpl_template = """^XA
-        ^FO20,20^A0N,30,30^FD{nombre}^FS
-        ^FO20,60^BY2^BCN,100,Y,N,N^FD{codigo}^FS
-        ^XZ"""
+    # def generar_zpl(self, producto):
+    #     # Plantilla ZPL para etiqueta (ajustable según necesidades)
+    #     zpl_template = """^XA
+    #     ^FO20,20^A0N,30,30^FD{nombre}^FS
+    #     ^FO20,60^BY2^BCN,100,Y,N,N^FD{codigo}^FS
+    #     ^XZ"""
         
-        return zpl_template.format(
+    #     return zpl_template.format(
+    #         nombre=producto["nombre"],
+    #         codigo=producto["codigo"]
+    #     )
+    
+    def generar_zpl(self, producto):
+    # Etiqueta de 50mm x 25mm (400x200 dots a 203 dpi)
+     zpl_template = """^XA
+    ^PW400
+    ^LL200
+    ^FO20,20^A0N,30,30^FD{nombre}^FS
+    ^FO20,70^BY2^BCN,100,Y,N,N^FD{codigo}^FS
+    ^XZ"""
+     return zpl_template.format(
             nombre=producto["nombre"],
             codigo=producto["codigo"]
         )
+    
 
 if __name__ == "__main__":
     root = tk.Tk()
