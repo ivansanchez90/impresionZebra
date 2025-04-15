@@ -1,18 +1,14 @@
 [
   {
-    "nombre": "dispenser blanco",
-    "codigo": "123456"
+    "nombre": "ANAFE INDUSTRIAL FOCO 2 HLLAS 20000 CAL/H CAÑO ROJO",
+    "codigo": "11622/2"
   },
   {
-    "nombre": "dispenser blanco2",
-    "codigo": "223456"
+    "nombre": "ANAFE 1 HORNALLA NEGRO/VERDE FUNDICION C/ MANGUER",
+    "codigo": "11616/1"
   },
   {
-    "nombre": "dispenser blanco3",
-    "codigo": "323456"
-  },
-  {
-    "nombre": "dispenser blanco4",
-    "codigo": "423456"
+    "nombre": "QUEMADOR AL DISCO FOCO PAELLERO CHICO 26 CM 7400 K/CAL",
+    "codigo": "23558/1"
   }
 ]

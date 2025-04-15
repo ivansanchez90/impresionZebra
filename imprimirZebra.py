@@ -65,10 +65,10 @@ class EtiquetasApp:
             messagebox.showerror("Error", "Nombre y código de barras son obligatorios")
             return
         
-        # Validar que el código sea numérico
-        if not codigo.isdigit():
-            messagebox.showerror("Error", "El código de barras debe contener solo números")
-            return
+        # # Validar que el código sea numérico
+        # if not codigo.isdigit():
+        #     messagebox.showerror("Error", "El código de barras debe contener solo números")
+        #     return
         
         # Agregar a la lista
         self.productos.append({
@@ -106,8 +106,8 @@ class EtiquetasApp:
                     if not all(key in producto for key in ['nombre', 'codigo']):
                         raise ValueError("Cada producto debe tener 'nombre' y 'codigo'")
                     
-                    if not str(producto['codigo']).isdigit():
-                        raise ValueError("El código de barras debe contener solo números")
+                    # if not str(producto['codigo']).isdigit():
+                    #     raise ValueError("El código de barras debe contener solo números")
                 
                 # Limpiar lista actual
                 self.productos.clear()
